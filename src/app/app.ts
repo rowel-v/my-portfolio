@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HlmButtonImports } from '@spartan-ng/helm/button';
+import { RouterOutlet } from '@angular/router'
+import { Header } from './features/header/header';
+import { Content } from './features/content/content';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HlmButtonImports],
+  imports: [RouterOutlet, Header, Content],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

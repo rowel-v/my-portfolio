@@ -1,0 +1,22 @@
+@keyframes color-shift {
+  0%,
+  100% {
+    color: #22c55e;
+  }
+  50% {
+    color: #dd0031;
+  }
+}
+
+.wobble-hor-bottom-animation {
+  animation:
+    wobble-hor-bottom 1s ease-in-out infinite,
+    color-shift 16s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wobble-hor-animation {
+    animation: none;
+    color: #22c55e;
+  }
+}

@@ -1,0 +1,31 @@
+<header class="border-b">
+  <div class="mx-auto flex max-w-6xl items-center justify-between py-4">
+    <div class="flex items-center gap-4">
+      <hlm-avatar class="size-12">
+        <span hlmAvatarFallback>RR</span>
+      </hlm-avatar>
+      <a href="#home" class="font-bold">Rowel</a>
+    </div>
+
+    <nav aria-label="Main navigation" class="flex gap-6">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="flex gap-4 items-center">
+      <button hlmBtn variant="outline" size="icon" class="rounded-full" [attr.aria-label]="currentTheme() === 'WHITE' ? 'Switch to dark theme' : 'Switch to light theme'" (click)="toggleTheme()">
+        @if (currentTheme() == 'WHITE') {
+          <ng-icon name="lucideMoon" aria-hidden="true" />
+        } @else {
+          <ng-icon name="lucideSun" aria-hidden="true" />
+        }
+      </button>
+
+      <button hlmBtn variant="outline" size="lg">
+        <p class="text-[16px]">Let's connect</p>
+      </button>
+    </div>
+  </div>
+</header>
