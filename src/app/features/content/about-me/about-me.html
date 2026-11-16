@@ -1,0 +1,154 @@
+<section id="home" class="grid gap-13 py-16 md:grid-cols-2 md:py-12">
+  <!---->
+  <div class="flex flex-col justify-between">
+    <!---->
+    <div class="flex justify-between items-center gap-8">
+      <div class="flex items-center gap-5">
+        <a
+          href="#home"
+          aria-label="Go to the top of the page"
+          class="rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        >
+          <hlm-avatar class="size-12">
+            <span hlmAvatarFallback class="bg-(--color-green) text-background text-[22px]">
+              R
+            </span>
+          </hlm-avatar>
+        </a>
+        <button
+          hlmBtn
+          variant="outline"
+          size="lg"
+          class="h-14 px-10 text-lg border-(--color-green) border"
+        >
+          View Resume
+        </button>
+      </div>
+
+      <brn-popover #notePopover="brnPopover" align="end" sideOffset="8" [role]="null">
+        <button
+          hlmBtn
+          brnPopoverTrigger
+          variant="ghost"
+          size="icon-lg"
+          class="-me-3 translate-y-1"
+          aria-label="A note from me"
+        >
+          <ng-icon
+            name="lucideBadgeInfo"
+            size="50px"
+            aria-hidden="true"
+            color="var(--color-green)"
+            class="wobble-hor-bottom-animation"
+          />
+        </button>
+        <ng-template brnPopoverContent>
+          <app-info (closed)="notePopover.close()" />
+        </ng-template>
+      </brn-popover>
+    </div>
+    <!---->
+    <div class="flex flex-col">
+      <h1
+        class="text-4xl leading-tight font-semibold tracking-tight text-primary sm:text-5xl"
+        style="font-family: 'Noto Sans', sans-serif"
+      >
+        Hello, I’m
+        <br />
+        Rowel Razonable
+      </h1>
+
+      <p class="mt-6 max-w-xl text-[22px] leading-relaxed text-muted-foreground">
+        I’m a full-stack Java developer building practical web applications with usability and
+        reliability in mind.
+      </p>
+    </div>
+
+    <div></div>
+  </div>
+
+  <div class="">
+    <img src="/rowel-photo.jpg" alt="Rowel Razonable" class="rounded-lg w-full object-cover" />
+  </div>
+</section>
+
+<section>
+  <div class="flex flex-row justify-between">
+    <div class="flex flex-row">
+      <a
+        hlmBtn
+        variant="link"
+        size="lg"
+        href="mailto:rowel.b.razonable@gmail.com"
+        class="text-xl gap-3"
+      >
+        <ng-icon name="lucideMail" size="24px" aria-hidden="true" color="var(--color-green)" />
+        rowel.b.razonable@gmail.com
+      </a>
+
+      <a hlmBtn variant="link" size="lg" href="tel:+639977713182" class="text-xl gap-3">
+        <ng-icon name="lucidePhone" size="24px" aria-hidden="true" color="var(--color-green)" />
+        0997 771 3182
+      </a>
+    </div>
+
+    <div class="flex flex-row gap-2">
+      <!--github-->
+      <a
+        hlmBtn
+        variant="link"
+        size="icon"
+        href="https://github.com/rowel-v"
+        target="_blank"
+        class="text-xl"
+      >
+        <img src="/github-logo.svg" class="invert" width="28" height="28" alt="" />
+      </a>
+
+      <!--linkedin-->
+      <a
+        hlmBtn
+        variant="link"
+        size="icon"
+        href="https://www.linkedin.com/in/rowel-razonable-8a7875366"
+        target="_blank"
+      >
+        <img src="/linkedin-logo.svg" class="invert" width="28" height="28" alt="" />
+      </a>
+
+      <!--facebook-->
+      <a
+        hlmBtn
+        variant="link"
+        size="icon"
+        href="https://www.facebook.com/abstract311"
+        target="_blank"
+      >
+        <img src="/facebook-logo.svg" class="invert" width="28" height="28" alt="" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Portfolio highlights" class="pt-10">
+  <div class="grid gap-4 pt-3 sm:grid-cols-3">
+    <div class="rounded-md border-border bg-card p-6">
+      <p class="text-3xl font-semibold tracking-tight text-card-foreground">01</p>
+      <p class="mt-2 text-sm text-muted-foreground">Completed Project</p>
+    </div>
+
+    <div class="rounded-md border-border bg-card p-6">
+      <p class="text-2xl font-semibold tracking-tight text-card-foreground">Full Stack</p>
+      <p class="mt-2 text-sm text-muted-foreground">
+        <span class="text-(--color-green)">Java</span>
+        &amp;
+        <span class="text-(--color-red)">Angular</span>
+      </p>
+    </div>
+
+    <div class="rounded-md border-border bg-card p-6">
+      <p class="text-2xl font-semibold tracking-tight text-card-foreground">Open to Work</p>
+      <p class="mt-2 text-sm text-muted-foreground">Freelance Opportunities</p>
+    </div>
+  </div>
+</section>

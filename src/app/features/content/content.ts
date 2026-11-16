@@ -1,17 +1,12 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import { lucideInfo, lucideMail, lucidePhone } from '@ng-icons/lucide';
-import { HlmAvatarImports } from '@spartan-ng/helm/avatar';
-import { HlmButtonImports } from '@spartan-ng/helm/button';
-import { BrnPopoverImports } from '@spartan-ng/brain/popover';
-import { Info } from './info/info';
+import { Component } from '@angular/core';
+import { AboutMe } from './about-me/about-me';
+import { WhatICanBuild } from './what-i-can-build/what-i-can-build';
+import { MyProject } from './my-project/my-project';
 
 @Component({
   selector: 'app-content',
-  imports: [HlmButtonImports, NgIcon, HlmAvatarImports, BrnPopoverImports, Info],
+  imports: [AboutMe, WhatICanBuild, MyProject],
   templateUrl: './content.html',
   styleUrl: './content.css',
-  providers: [provideIcons({ lucideMail, lucidePhone, lucideInfo })],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Content {}
