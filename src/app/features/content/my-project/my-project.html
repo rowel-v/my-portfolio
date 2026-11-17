@@ -1,10 +1,10 @@
-<section aria-labelledby="featured-project-title">
-  <h2 id="featured-project-title" class="text-[26px] font-semibold tracking-tight text-primary">
-    Featured Project
-  </h2>
+<section id="featuredProject" aria-labelledby="featured-project-title">
+  <a href="#featuredProject" class="inline-block">
+    <app-header-label label="Featured Project" />
+  </a>
 
   <article class="mt-8 grid items-start gap-8 md:grid-cols-2 md:gap-10">
-    <div>
+    <div class="min-w-0">
       <div
         role="img"
         aria-label="My Tasks desktop dashboard and login screen"
@@ -26,30 +26,60 @@
           class="object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none"
         />
       </div>
-      <a
-        href="/project-photo/my-task-home-mobile.png"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-2 inline-block text-sm text-muted-foreground underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-      >
-        View mobile screenshot <span class="sr-only">(opens in a new tab)</span>
-      </a>
+
+      <div class="flex flex-row justify-between">
+        <a
+          href="/project-photo/my-task-home-mobile.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-2 inline-block text-sm text-muted-foreground underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        >
+          View Mobile <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+        <a
+          href="https://github.com/rowel-v/task-web"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-2 inline-block text-sm text-muted-foreground underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        >
+          View Frontend <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+        <a
+          href="https://github.com/rowel-v/task-api"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-2 inline-block text-sm text-muted-foreground underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+        >
+          View Backend <span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </div>
     </div>
 
-    <div>
-      <a href="https://task-web-pva7.onrender.com/login" target="_blank">
-        <button hlmBtn variant="outline" size="lg" class="gap-5">
-          <h3 class="text-[22px] font-semibold text-[rgb(255_213_128)]">My Tasks</h3>
-          <ng-icon name="lucideArrowUpRight" size="20" />
-        </button>
-      </a>
+    <div class="min-w-0">
+      <h3>
+        <a
+          hlmBtn
+          href="https://task-web-pva7.onrender.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="outline"
+          size="lg"
+          class="gap-4 text-[20px] font-semibold text-[rgb(255_213_128)]"
+        >
+          My Tasks
+          <ng-icon name="lucideArrowUpRight" size="20" aria-hidden="true" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </h3>
 
       <p class="mt-4 leading-relaxed text-muted-foreground">
         A responsive web-based task management app for organizing daily tasks and tracking progress.
       </p>
-      <h4 class="mt-4 text-sm font-medium text-foreground">Features</h4>
+      <h4 class="mt-6 text-sm font-medium text-foreground">Features</h4>
       <ul
-        class="mt-2 grid list-disc grid-cols-1 gap-x-6 gap-y-2 pl-5 text-sm leading-relaxed text-muted-foreground sm:grid-cols-2"
+        class="mt-2 grid list-disc grid-cols-1 gap-x-6 gap-y-2 pl-5 text-sm leading-relaxed text-muted-foreground lg:grid-cols-2"
       >
         <li>Create and organize tasks</li>
         <li>Search, filter, and archive tasks</li>
@@ -57,13 +87,14 @@
         <li>View progress on a dashboard</li>
       </ul>
 
-      <div class="flex flex-row gap-4 pt-2">
-        <button hlmBtn variant="outline" size="sm" class="gap-5">Angular</button>
-
-        <button hlmBtn variant="outline" size="sm" class="gap-5">Spring Boot</button>
-
-        <button hlmBtn variant="outline" size="sm" class="gap-5">PostgreSQL</button>
-      </div>
+      <ul aria-label="Technologies used" class="mt-6 flex flex-wrap gap-2">
+        <li class="rounded-full border border-border px-3 py-1 text-sm text-primary">Angular</li>
+        <li class="rounded-full border border-border px-3 py-1 text-sm text-primary">daisyUI</li>
+        <li class="rounded-full border border-border px-3 py-1 text-sm text-primary=">
+          Spring Boot
+        </li>
+        <li class="rounded-full border border-border px-3 py-1 text-sm text-primary">PostgreSQL</li>
+      </ul>
     </div>
   </article>
 </section>

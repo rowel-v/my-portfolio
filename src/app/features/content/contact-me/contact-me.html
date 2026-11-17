@@ -1,0 +1,108 @@
+<section
+  id="contactMe"
+  aria-label="Contact"
+  class="w-full bg-muted/40 px-6 py-16 text-center sm:px-10"
+>
+  <a href="#contactMe" class="mb-15 inline-block">
+    <app-header-label label="" [size]="30" style="font-family: 'Buda', sans-serif" />
+    <h1
+      class="text-3xl leading-tight font-bold tracking-wider text-primary sm:text-4xl"
+      style="font-family: 'Buda', sans-serif"
+    >
+      Let’s Connect
+    </h1>
+  </a>
+  <form
+    [formRoot]="form"
+    (submit)="showValidationErrors()"
+    class="mx-auto w-full max-w-4xl p-6 sm:p-8 md:w-3/4"
+  >
+    <h2 class="mb-6 text-left text-1xl font-semibold text-primary sm:text-2xl  tracking-wider"  style="font-family: 'Buda', sans-serif">
+      Tell me about your project, and I’ll let you know if it’s something I can help you build.
+    </h2>
+    <hlm-field-group>
+      <div class="grid items-end gap-6 lg:grid-cols-2">
+        <hlm-field class="min-w-0">
+          <label hlmFieldLabel for="form-name" class="text-lg"
+            >Name <span aria-hidden="true">*</span></label
+          >
+          <input
+            hlmInput
+            type="text"
+            id="form-name"
+            autocomplete="name"
+            class="rounded-none border-0 border-b bg-transparent px-0 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+            [formField]="form.name"
+          />
+        </hlm-field>
+        <hlm-field class="min-w-0">
+          <label hlmFieldLabel for="form-email" class="text-lg"
+            >Email <span aria-hidden="true">*</span></label
+          >
+          <input
+            hlmInput
+            type="email"
+            id="form-email"
+            autocomplete="email"
+            class="rounded-none border-0 border-b bg-transparent px-0 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+            [formField]="form.email"
+          />
+        </hlm-field>
+      </div>
+      <div class="grid items-end gap-6 lg:grid-cols-2">
+        <hlm-field class="min-w-0">
+          <label hlmFieldLabel for="form-budget" class="text-lg">Estimated budget</label>
+          <input
+            hlmInput
+            type="text"
+            id="form-budget"
+            class="rounded-none border-0 border-b bg-transparent px-0 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+            [formField]="form.budget"
+          />
+        </hlm-field>
+        <hlm-field class="min-w-0">
+          <label hlmFieldLabel for="form-completion-date" class="text-lg"
+            >Preferred completion date</label
+          >
+          <hlm-date-picker
+            [formField]="form.preferredCompletionDate"
+            [autoCloseOnSelect]="true"
+            [minDate]="minimumCompletionDate()"
+            align="end"
+          >
+            <hlm-date-picker-trigger
+              buttonId="form-completion-date"
+              variant="ghost"
+              class="w-full rounded-none border-0 border-b border-input bg-transparent px-0 text-lg focus-visible:border-[#22c55e]"
+              (click)="refreshMinimumCompletionDate()"
+            ></hlm-date-picker-trigger>
+          </hlm-date-picker>
+        </hlm-field>
+      </div>
+      <hlm-field>
+        <label hlmFieldLabel for="form-message" class="text-lg"
+          >Message <span aria-hidden="true">*</span></label
+        >
+        <textarea
+          hlmInput
+          id="form-message"
+          rows="5"
+          class="h-auto rounded-none border-0 border-b bg-transparent px-0 py-3 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+          [formField]="form.message"
+        ></textarea>
+      </hlm-field>
+      <hlm-field orientation="horizontal" class="justify-center">
+        <button
+          hlmBtn
+          type="submit"
+          variant="outline"
+          size="lg"
+          class="h-14 gap-3 px-10 font-bold text-lg text-[#020617] bg-(--color-green) border shadow-drop-green-animation hover:bg-(--color-green) hover:text-[#020617]"
+        >
+          Submit
+          <ng-icon name="lucideSendHorizontal" size="24px" class="text-[24px]" aria-hidden="true" />
+        </button>
+      </hlm-field>
+    </hlm-field-group>
+  </form>
+</section>

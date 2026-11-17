@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderLabel } from '../../../shared/header-label/header-label';
 
 @Component({
   selector: 'app-what-i-can-build',
-  imports: [],
+  imports: [HeaderLabel],
   templateUrl: './what-i-can-build.html',
   styles: ``,
 })

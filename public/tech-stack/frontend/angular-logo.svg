@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="title">
+  <title id="title">Angular gradient logo</title>
+  <defs>
+    <linearGradient id="angular-base" x1="25.071%" y1="90.929%" x2="96.132%" y2="55.184%">
+      <stop offset="0%" stop-color="#e40035"/>
+      <stop offset="24%" stop-color="#f60a48"/>
+      <stop offset="35.2%" stop-color="#f20755"/>
+      <stop offset="49.4%" stop-color="#dc087d"/>
+      <stop offset="74.5%" stop-color="#9717e7"/>
+      <stop offset="100%" stop-color="#6c00f5"/>
+    </linearGradient>
+    <linearGradient id="angular-highlight" x1="21.863%" y1="12.058%" x2="68.367%" y2="68.21%">
+      <stop offset="0%" stop-color="#ff31d9"/>
+      <stop offset="100%" stop-color="#ff5be1" stop-opacity="0"/>
+    </linearGradient>
+    <path id="angular-shape" d="M256 45.179 246.756 190.337 158.373 0z M194.783 232.876 128.001 270.981 61.217 232.876 74.8 199.958h106.4z M128.001 72.249 162.995 157.325H93.005z M9.149 190.337 0 45.179 97.627 0z"/>
+  </defs>
+  <g transform="translate(81 68) scale(1.707)">
+    <use href="#angular-shape" fill="url(#angular-base)"/>
+    <use href="#angular-shape" fill="url(#angular-highlight)"/>
+  </g>
+</svg>

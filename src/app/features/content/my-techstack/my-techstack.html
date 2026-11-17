@@ -1,4 +1,49 @@
-<section class="">
-  <h2 class="text-[26px] font-semibold tracking-tight text-primary">My </h2>
+<section id="techstack" aria-label="Tech Stack" class="pb-16">
+  <a href="#techstack" class="inline-block">
+    <app-header-label label="Tech Stack" />
+  </a>
 
+  <div class="mt-8">
+    <div class="grid gap-3 border-t border-border py-5 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring hover:bg-muted/40 focus-visible:bg-muted/40 px-4 hover:rounded-md">
+      <h3 class="text-lg font-medium text-foreground sm:pt-3">Frontend</h3>
+      <div class="flex flex-wrap gap-x-2 gap-y-1">
+        <app-tech-stack imageSrc="/tech-stack/frontend/html5-logo.svg" name="HTML" />
+        <app-tech-stack imageSrc="/tech-stack/frontend/tailwindcss-logo.svg" name="Tailwind CSS" />
+        <app-tech-stack imageSrc="/tech-stack/frontend/javascript-logo.svg" name="JavaScript" />
+        <app-tech-stack imageSrc="/tech-stack/frontend/typescript-logo.svg" name="TypeScript" />
+        <app-tech-stack imageSrc="/tech-stack/frontend/angular-logo.svg" name="Angular" />
+        <app-tech-stack imageSrc="/tech-stack/frontend/daisyUI-logo.svg" name="daisyUI" />
+      </div>
+    </div>
+
+    <div class="grid gap-3 border-t border-border py-5 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring hover:bg-muted/40 focus-visible:bg-muted/40 px-4 hover:rounded-md">
+      <h3 class="text-lg font-medium text-foreground sm:pt-3">Backend &amp; Data</h3>
+      <div class="flex flex-wrap gap-x-2 gap-y-1">
+        <app-tech-stack imageSrc="/tech-stack/backend/java-logo.svg" name="Java" />
+        <app-tech-stack imageSrc="/tech-stack/backend/springboot-logo.svg" name="Spring Boot" />
+        <app-tech-stack imageSrc="/tech-stack/backend/rest-api-logo.svg" name="REST API" />
+        <app-tech-stack imageSrc="/tech-stack/backend/postgresql-logo.svg" name="PostgreSQL" />
+        <app-tech-stack imageSrc="/tech-stack/backend/flyway-logo.svg" name="Flyway" />
+      </div>
+    </div>
+
+    <div class="grid gap-3 border-t border-border py-5 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-6 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring hover:bg-muted/40 focus-visible:bg-muted/40 px-4 hover:rounded-md">
+      <h3 class="text-lg font-medium text-foreground sm:pt-3">Tools &amp; Integrations</h3>
+      <div class="flex flex-wrap gap-x-2 gap-y-1">
+        <app-tech-stack imageSrc="/tech-stack/tools-and-Integrations/git-logo.svg" name="Git" />
+        <app-tech-stack
+          imageSrc="/tech-stack/tools-and-Integrations/docker-logo.svg"
+          name="Docker"
+        />
+        <app-tech-stack
+          imageSrc="/tech-stack/tools-and-Integrations/postman-logo.svg"
+          name="Postman"
+        />
+        <app-tech-stack
+          imageSrc="/tech-stack/tools-and-Integrations/ng-openapi-logo.svg"
+          name="ng-openapi"
+        />
+      </div>
+    </div>
+  </div>
 </section>
