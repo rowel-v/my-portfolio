@@ -1,4 +1,4 @@
-<section id="about-me" class="grid gap-10 py-10 sm:gap-13 sm:py-16 md:grid-cols-2 md:py-12">
+<section id="about-me" class="grid gap-3 py-10 sm:gap-13 sm:py-16 md:grid-cols-2 md:py-12">
   <!---->
   <div class="flex flex-col justify-between gap-10 md:gap-0">
     <!---->
@@ -9,8 +9,8 @@
           aria-label="Go to the top of the page"
           class="rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
         >
-          <hlm-avatar class="size-12 shadow-drop-green-animation">
-            <span hlmAvatarFallback class="bg-(--color-green) text-background text-[22px]">
+          <hlm-avatar class="shadow-drop-green-animation size-12">
+            <span hlmAvatarFallback class="bg-(--color-green) text-[22px] text-background">
               R
             </span>
           </hlm-avatar>
@@ -19,7 +19,7 @@
           hlmBtn
           variant="outline"
           size="lg"
-          class="h-12 border border-(--color-green) px-4 text-base shadow-drop-green-animation sm:h-14 sm:px-10 sm:text-lg"
+          class="shadow-drop-green-animation h-12 border border-(--color-green) px-4 text-base sm:h-14 sm:px-10 sm:text-lg"
         >
           View Resume
         </button>
@@ -31,7 +31,7 @@
           brnPopoverTrigger
           variant="ghost"
           size="icon-lg"
-          class="translate-y-1 shadow-drop-green-animation sm:-me-3"
+          class="shadow-drop-green-animation translate-y-1 sm:-me-3"
           aria-label="A note from me"
         >
           <ng-icon
@@ -50,7 +50,7 @@
     <!---->
     <div class="flex flex-col">
       <h1
-        class="text-4xl leading-tight font-bold tracking-wider text-primary sm:text-5xl"
+        class="text-4xl leading-tight font-bold tracking-wider text-primary sm:text-5xl md:mt-10"
         style="font-family: 'Buda', sans-serif"
       >
         Hello, I’m
@@ -74,7 +74,7 @@
       height="984"
       priority
       alt="Rowel Razonable"
-      class="w-full rounded-lg object-cover shadow-[0_-18px_40px_-8px_rgba(34,197,94,0.6),18px_0_40px_-8px_rgba(221,0,49,0.6)]"
+      class="mx-auto w-full max-w-60 rounded-lg object-cover shadow-[0_-18px_40px_-8px_rgba(34,197,94,0.6),18px_0_40px_-8px_rgba(221,0,49,0.6)] md:max-w-none"
     />
   </div>
 </section>
@@ -88,16 +88,22 @@
         variant="link"
         size="lg"
         [href]="'mailto:' + myContact.myEmail"
-        class="gap-3 px-0 text-base sm:text-xl lg:px-4"
+        class="gap-3 px-0 text-base sm:text-xl"
       >
         <ng-icon name="lucideMail" size="24px" aria-hidden="true" color="var(--color-green)" />
         rowel.b.razonable@gmail.com
       </a>
 
       <!--Phone number-->
-      <a hlmBtn variant="link" size="lg" [href]="'tel:'+ myContact.myPhoneNumber" class="gap-3 px-0 text-base sm:text-xl lg:px-4">
+      <a
+        hlmBtn
+        variant="link"
+        size="lg"
+        [href]="'tel:' + myContact.myPhoneNumber"
+        class="gap-3 px-0 text-base sm:text-xl"
+      >
         <ng-icon name="lucidePhone" size="24px" aria-hidden="true" color="var(--color-green)" />
-          09674 128 269
+        09674 128 269
       </a>
     </div>
 
@@ -129,12 +135,12 @@
 
 <section aria-label="Portfolio highlights" class="pt-10">
   <div class="grid gap-4 pt-3 sm:grid-cols-3">
-    <div class="rounded-md border-border bg-card p-6 shadow-drop-red-animation">
+    <div class="shadow-drop-red-animation rounded-md border-border bg-card p-6">
       <p class="text-3xl font-semibold tracking-tight text-card-foreground">01</p>
       <p class="mt-2 text-sm text-muted-foreground">Completed Project</p>
     </div>
 
-    <div class="rounded-md border-border bg-card p-6 shadow-drop-red-animation">
+    <div class="shadow-drop-red-animation rounded-md border-border bg-card p-6">
       <p class="text-2xl font-semibold tracking-tight text-card-foreground">Full Stack</p>
       <p class="mt-2 text-sm text-muted-foreground">
         <span class="text-(--color-green)">Java</span>
@@ -143,7 +149,7 @@
       </p>
     </div>
 
-    <div class="rounded-md border-border bg-card p-6 shadow-drop-red-animation">
+    <div class="shadow-drop-red-animation rounded-md border-border bg-card p-6">
       <p class="text-2xl font-semibold tracking-tight text-card-foreground">Open to Work</p>
       <p class="mt-2 text-sm text-muted-foreground">Freelance Opportunities</p>
     </div>

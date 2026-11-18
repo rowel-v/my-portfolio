@@ -1,9 +1,9 @@
 <section
   id="contact"
   aria-label="Contact"
-  class="w-full bg-muted/40 px-4 py-16 text-center sm:px-10 sm:py-23"
+  class="w-full bg-muted/40 px-4 py-16 text-center sm:py-23"
 >
-  <a href="#contact" class="mb-6 inline-block">
+  <a href="#contact" class="mb-4 inline-block sm:mb-6">
     <h1
       class="inline-flex items-center gap-5 text-3xl leading-tight font-bold tracking-wider text-primary sm:text-[30px]"
       style="font-family: 'Buda', sans-serif"
@@ -15,12 +15,12 @@
   <form
     [formRoot]="form"
     (submit)="showValidationErrors()"
-    class="mx-auto w-full max-w-4xl px-0 py-2 sm:p-8 md:w-3/4"
+    class="mx-auto w-[90%] max-w-4xl px-0 py-2 sm:w-full sm:py-8 md:w-3/4"
   >
     <!--Form title-->
     <h2
       #projectIntro
-      class="mb-8 text-left text-lg font-semibold tracking-wider text-primary sm:mb-12 sm:text-[22px]"
+      class="mb-12 text-left text-lg font-semibold tracking-wider text-primary sm:mb-12 sm:text-[22px]"
       style="font-family: 'Buda', sans-serif"
     >
       <span class="sr-only">{{ projectIntroText }}</span>
@@ -33,9 +33,9 @@
       </span>
     </h2>
 
-    <hlm-field-group>
-      <div class="grid items-end gap-6 lg:grid-cols-2">
-        <hlm-field class="min-w-0">
+    <hlm-field-group class="gap-4 sm:gap-7">
+      <div class="grid items-end gap-4 sm:gap-6 lg:grid-cols-2">
+        <hlm-field class="min-w-0 gap-2 sm:gap-3">
           <label hlmFieldLabel for="form-name" class="text-lg"
             >Name <span aria-hidden="true">*</span></label
           >
@@ -48,7 +48,7 @@
             [formField]="form.name"
           />
         </hlm-field>
-        <hlm-field class="min-w-0">
+        <hlm-field class="min-w-0 gap-2 sm:gap-3">
           <label hlmFieldLabel for="form-email" class="text-lg"
             >Email <span aria-hidden="true">*</span></label
           >
@@ -62,8 +62,8 @@
           />
         </hlm-field>
       </div>
-      <div class="grid items-end gap-6 lg:grid-cols-2">
-        <hlm-field class="min-w-0">
+      <div class="grid items-end gap-4 sm:gap-6 lg:grid-cols-2">
+        <hlm-field class="min-w-0 gap-2 sm:gap-3">
           <label hlmFieldLabel for="form-budget" class="text-lg">Estimated budget</label>
           <input
             hlmInput
@@ -73,7 +73,7 @@
             [formField]="form.budget"
           />
         </hlm-field>
-        <hlm-field class="min-w-0">
+        <hlm-field class="min-w-0 gap-2 sm:gap-3">
           <label hlmFieldLabel for="form-completion-date" class="text-lg"
             >Preferred completion date</label
           >
@@ -92,7 +92,7 @@
           </hlm-date-picker>
         </hlm-field>
       </div>
-      <hlm-field>
+      <hlm-field class="gap-2 sm:gap-3">
         <label hlmFieldLabel for="form-message" class="text-lg"
           >Message <span aria-hidden="true">*</span></label
         >
@@ -100,11 +100,11 @@
           hlmInput
           id="form-message"
           rows="2"
-          class="h-auto rounded-none border-0 border-b bg-transparent px-0 py-3 text-lg focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0 data-[matches-spartan-invalid=true]:ring-0 md:text-lg"
+          class="h-auto rounded-none border-0 border-b bg-transparent px-0 py-2 text-lg focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0 data-[matches-spartan-invalid=true]:ring-0 md:text-lg"
           [formField]="form.message"
         ></textarea>
       </hlm-field>
-      <hlm-field orientation="horizontal" class="justify-center">
+      <hlm-field orientation="horizontal" class="justify-center pt-5">
         <button
           hlmBtn
           type="submit"
