@@ -1,22 +1,23 @@
-@keyframes color-shift {
-  0%,
-  100% {
-    color: var(--color-green);
-  }
-  50% {
-    color: var(--color-red)
-  }
+/* Starts the scroll animationwhen the appScrollReveal directive adds the class. */
+.scroll-reveal {
+  animation: fade-up 1000ms ease-out;
 }
 
-.wobble-hor-bottom-animation {
-  animation:
-    wobble-hor-bottom 1s ease-in-out infinite,
-    color-shift 16s ease-in-out infinite;
+@keyframes fade-up {
+  from {
+    opacity: 0.5;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wobble-hor-animation {
+  .scroll-reveal {
     animation: none;
-    color: #22c55e;
   }
 }
+/*-----------------------------------------*/

@@ -1,24 +1,21 @@
-@keyframes shadow-drop-green {
-  0% {
-    transform: translateZ(0);
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-  }
+/* Gradually changes the icon from green to red and back. */
+@keyframes color-shift {
+  0%,
   100% {
-    transform: translateZ(50px);
-    box-shadow: 0 0 30px 2px rgba(9, 211, 83, 0.5);
+    color: var(--color-green);
+  }
+
+  50% {
+    color: var(--color-red);
   }
 }
 
-.shadow-drop-green-animation:hover {
-  animation: shadow-drop-green 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.color-shift-animation {
+  animation: color-shift 16s ease-in-out infinite;
 }
+/*---------------------------*/
 
-@media (prefers-reduced-motion: reduce) {
-  .shadow-drop-green-animation:hover {
-    animation: none;
-  }
-}
-
+/* color red hover effect*/
 @keyframes shadow-drop-red {
   from {
     box-shadow: 0 0 0 0 rgba(221, 0, 49, 0);
@@ -39,3 +36,4 @@
     animation: none;
   }
 }
+/*---------------------------*/

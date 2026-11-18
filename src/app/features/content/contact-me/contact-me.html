@@ -1,25 +1,38 @@
 <section
-  id="contactMe"
+  id="contact"
   aria-label="Contact"
-  class="w-full bg-muted/40 px-6 py-16 text-center sm:px-10"
+  class="w-full bg-muted/40 px-4 py-16 text-center sm:px-10 sm:py-23"
 >
-  <a href="#contactMe" class="mb-15 inline-block">
-    <app-header-label label="" [size]="30" style="font-family: 'Buda', sans-serif" />
+  <a href="#contact" class="mb-6 inline-block">
     <h1
-      class="text-3xl leading-tight font-bold tracking-wider text-primary sm:text-4xl"
+      class="inline-flex items-center gap-5 text-3xl leading-tight font-bold tracking-wider text-primary sm:text-[30px]"
       style="font-family: 'Buda', sans-serif"
     >
       Let’s Connect
+      <ng-icon name="lucideMessageCircle" size="32px" class="-translate-y-0.5" aria-hidden="true" />
     </h1>
   </a>
   <form
     [formRoot]="form"
     (submit)="showValidationErrors()"
-    class="mx-auto w-full max-w-4xl p-6 sm:p-8 md:w-3/4"
+    class="mx-auto w-full max-w-4xl px-0 py-2 sm:p-8 md:w-3/4"
   >
-    <h2 class="mb-6 text-left text-1xl font-semibold text-primary sm:text-2xl  tracking-wider"  style="font-family: 'Buda', sans-serif">
-      Tell me about your project, and I’ll let you know if it’s something I can help you build.
+    <!--Form title-->
+    <h2
+      #projectIntro
+      class="mb-8 text-left text-lg font-semibold tracking-wider text-primary sm:mb-12 sm:text-[22px]"
+      style="font-family: 'Buda', sans-serif"
+    >
+      <span class="sr-only">{{ projectIntroText }}</span>
+      <span aria-hidden="true" class="typing-text" [class.typing-started]="typingStarted()">
+        @for (character of projectIntroText; track $index) {
+          <span class="typing-character" [style.animation-delay.ms]="$index * 35">{{
+            character
+          }}</span>
+        }
+      </span>
     </h2>
+
     <hlm-field-group>
       <div class="grid items-end gap-6 lg:grid-cols-2">
         <hlm-field class="min-w-0">
@@ -31,7 +44,7 @@
             type="text"
             id="form-name"
             autocomplete="name"
-            class="rounded-none border-0 border-b bg-transparent px-0 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+            class="rounded-none border-0 border-b bg-transparent px-0 text-lg focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0 data-[matches-spartan-invalid=true]:ring-0 md:text-lg"
             [formField]="form.name"
           />
         </hlm-field>
@@ -44,7 +57,7 @@
             type="email"
             id="form-email"
             autocomplete="email"
-            class="rounded-none border-0 border-b bg-transparent px-0 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+            class="rounded-none border-0 border-b bg-transparent px-0 text-lg focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0 data-[matches-spartan-invalid=true]:ring-0 md:text-lg"
             [formField]="form.email"
           />
         </hlm-field>
@@ -56,7 +69,7 @@
             hlmInput
             type="text"
             id="form-budget"
-            class="rounded-none border-0 border-b bg-transparent px-0 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+            class="rounded-none border-0 border-b bg-transparent px-0 text-lg focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0 data-[matches-spartan-invalid=true]:ring-0 md:text-lg"
             [formField]="form.budget"
           />
         </hlm-field>
@@ -74,7 +87,7 @@
               buttonId="form-completion-date"
               variant="ghost"
               class="w-full rounded-none border-0 border-b border-input bg-transparent px-0 text-lg focus-visible:border-[#22c55e]"
-              (click)="refreshMinimumCompletionDate()"
+              (focusin)="refreshMinimumCompletionDate()"
             ></hlm-date-picker-trigger>
           </hlm-date-picker>
         </hlm-field>
@@ -86,8 +99,8 @@
         <textarea
           hlmInput
           id="form-message"
-          rows="5"
-          class="h-auto rounded-none border-0 border-b bg-transparent px-0 py-3 text-lg md:text-lg data-[matches-spartan-invalid=true]:ring-0 focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0"
+          rows="2"
+          class="h-auto rounded-none border-0 border-b bg-transparent px-0 py-3 text-lg focus-visible:border-b focus-visible:border-[#22c55e] focus-visible:ring-0 data-[matches-spartan-invalid=true]:ring-0 md:text-lg"
           [formField]="form.message"
         ></textarea>
       </hlm-field>
@@ -95,14 +108,20 @@
         <button
           hlmBtn
           type="submit"
+          id="contact-submit"
+          [disabled]="form().submitting()"
           variant="outline"
           size="lg"
-          class="h-14 gap-3 px-10 font-bold text-lg text-[#020617] bg-(--color-green) border shadow-drop-green-animation hover:bg-(--color-green) hover:text-[#020617]"
+          class="shadow-drop-green-animation h-14 gap-3 border bg-(--color-green) px-6 text-lg font-bold text-[#020617] hover:bg-(--color-green) hover:text-[#020617]"
         >
-          Submit
+          {{ form().submitting() ? 'Sending...' : 'Send' }}
           <ng-icon name="lucideSendHorizontal" size="24px" class="text-[24px]" aria-hidden="true" />
         </button>
       </hlm-field>
     </hlm-field-group>
   </form>
+  <app-message-sent-dialog
+    [open]="submissionStatus() === 'success'"
+    (closed)="closeSuccessDialog()"
+  />
 </section>

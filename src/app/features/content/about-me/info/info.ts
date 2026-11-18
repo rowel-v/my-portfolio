@@ -8,6 +8,4 @@ import { HlmButtonImports } from '@spartan-ng/helm/button';
   styleUrl: './info.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Info {
-  
-}
+export class Info {}
