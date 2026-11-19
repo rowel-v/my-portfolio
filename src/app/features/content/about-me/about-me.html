@@ -3,7 +3,7 @@
   <div class="flex flex-col justify-between gap-10 md:gap-0">
     <!---->
     <div class="flex items-center justify-between gap-3 sm:gap-8">
-      <div class="flex min-w-0 items-center gap-3 sm:gap-5">
+      <div class="flex min-w-0 items-center gap-3 sm:gap-3">
         <a
           href="#about-me"
           aria-label="Go to the top of the page"
@@ -15,14 +15,20 @@
             </span>
           </hlm-avatar>
         </a>
-        <button
+        <h1
+          class="text-2xl font-bold text-primary sm:text-3xl"
+          style="font-family: 'Buda', sans-serif"
+        >
+          Rowel
+        </h1>
+        <!-- <button
           hlmBtn
           variant="outline"
           size="lg"
           class="shadow-drop-green-animation h-12 border border-(--color-green) px-4 text-base sm:h-14 sm:px-10 sm:text-lg"
         >
           View Resume
-        </button>
+        </button> -->
       </div>
 
       <brn-popover #notePopover="brnPopover" align="end" sideOffset="8" [role]="null">
@@ -81,7 +87,7 @@
 
 <section>
   <div class="flex flex-col items-start gap-4 lg:flex-row lg:items-center lg:justify-between">
-    <div class="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:gap-x-4 lg:gap-0">
+    <div class="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:gap-x-4 lg:gap-12">
       <!--Email-->
       <a
         hlmBtn
@@ -117,17 +123,35 @@
         target="_blank"
         class="text-xl"
       >
-        <img src="/github-logo.svg" class="invert" width="28" height="28" alt="" />
+        <img
+          src="/tech-stack/contact/github-logo.svg"
+          class="invert"
+          width="28"
+          height="28"
+          alt=""
+        />
       </a>
 
       <!--linkedin-->
       <a hlmBtn variant="link" size="icon" [href]="myContact.myLinkedinLink" target="_blank">
-        <img src="/linkedin-logo.svg" class="invert" width="28" height="28" alt="" />
+        <img
+          src="/tech-stack/contact/linkedin-logo.svg"
+          class="invert"
+          width="28"
+          height="28"
+          alt=""
+        />
       </a>
 
       <!--facebook-->
       <a hlmBtn variant="link" size="icon" [href]="myContact.myFacebookLink" target="_blank">
-        <img src="/facebook-logo.svg" class="invert" width="28" height="28" alt="" />
+        <img
+          src="/tech-stack/contact/facebook-logo.svg"
+          class="invert"
+          width="28"
+          height="28"
+          alt=""
+        />
       </a>
     </div>
   </div>
